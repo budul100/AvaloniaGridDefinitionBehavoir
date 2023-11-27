@@ -5,7 +5,12 @@ VisualStudioVersion = 17.7.34302.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaGridDefinitionBehavoir", "AvaloniaGridDefinitionBehavoir\AvaloniaGridDefinitionBehavoir.csproj", "{3C8D2E51-90E2-40E3-8E36-A8AFDFF264A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaGridDefinitionBehavoirSample", "AvaloniaGridDefinitionBehavoirSample\AvaloniaGridDefinitionBehavoirSample.csproj", "{4BED80BB-3F1E-4422-AD11-207B141CA97A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaGridDefinitionBehavoirSample", "AvaloniaGridDefinitionBehavoirSample\AvaloniaGridDefinitionBehavoirSample.csproj", "{4BED80BB-3F1E-4422-AD11-207B141CA97A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Additionals", "Additionals", "{8045BE12-22A4-4A02-969C-F0954F0281A1}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

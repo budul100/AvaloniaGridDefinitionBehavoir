@@ -6,6 +6,7 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<AssemblyVersion>1.0.0</AssemblyVersion>
+		<RepositoryUrl>https://github.com/budul100/AvaloniaGridDefinitionBehavoir</RepositoryUrl>
 	</PropertyGroup>
 
 	<ItemGroup>
