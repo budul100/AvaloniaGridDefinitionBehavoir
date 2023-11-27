@@ -62,7 +62,7 @@ Definitions with stars must be set additionally by using regular expressions. Th
 </Grid>
 ```
 
-The definitions can also be bound onto the view models. The following can be seen in the [sample data](./AvaloniaGridDefinitionBehavoirSample/Views/MainWindow.axaml).
+For MVVM apps the grid definitions can also be bound onto the view models. The following can be seen in the [sample data](./AvaloniaGridDefinitionBehavoirSample/Views/MainWindow.axaml).
 
 ```
 <ItemsControl
