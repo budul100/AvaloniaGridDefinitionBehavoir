@@ -4,6 +4,8 @@ This behavior allows the adjustment of the RowDefinitions / ColumnDefinitions of
 
 The behavior is available as [NuGet package](https://www.nuget.org/packages/budul.AvaloniaGridDefinitionBehavoir).
 
+[![NuGet version (budul.AvaloniaGridDefinitionBehavoir)]](https://www.nuget.org/packages/budul.AvaloniaGridDefinitionBehavoir)
+
 ## Useage
 
 The following code ...
