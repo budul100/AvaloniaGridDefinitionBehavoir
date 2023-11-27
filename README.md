@@ -2,6 +2,8 @@
 
 This behavior allows the adjustment of the RowDefinitions / ColumnDefinitions of Avalonia Grids. It was inspired by a [blog entry by Rachel Lim](https://rachel53461.wordpress.com/2011/09/17/wpf-grids-rowcolumn-count-properties/). This approach was initially shown for WPF Grids.
 
+The behavior is available as [NuGet package](https://www.nuget.org/packages/budul.AvaloniaGridDefinitionBehavoir).
+
 ## Useage
 
 The following code ...
