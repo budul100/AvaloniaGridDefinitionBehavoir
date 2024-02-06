@@ -22,6 +22,7 @@
             Text="All columns and rows set to Auto" />
 
         <ItemsControl
+            Name="Grid"
             x:DataType="vm:MainWindowViewModel"
             DockPanel.Dock="Top"
             ItemsSource="{Binding Elements}">
@@ -92,8 +93,5 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-
     </DockPanel>
-
-
 </Window>

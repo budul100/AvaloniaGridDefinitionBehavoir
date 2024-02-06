@@ -1,6 +1,5 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 using AvaloniaGridDefinitionBehavoirSample.ViewModels;
@@ -10,6 +9,8 @@ namespace AvaloniaGridDefinitionBehavoirSample
 {
     public partial class App : Application
     {
+        #region Public Methods
+
         public override void Initialize()
         {
             AvaloniaXamlLoader.Load(this);
@@ -30,5 +31,7 @@ namespace AvaloniaGridDefinitionBehavoirSample
 
             base.OnFrameworkInitializationCompleted();
         }
+
+        #endregion Public Methods
     }
 }

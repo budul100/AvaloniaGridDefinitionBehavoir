@@ -79,13 +79,13 @@ namespace AvaloniaGridDefinitionBehavoir
                 {
                     var definition = new ColumnDefinition()
                     {
-                        Width = GridLength.Auto
+                        Width = GridLength.Star
                     };
 
                     grid.ColumnDefinitions.Add(definition);
                 }
 
-                SetStarColumns(grid);
+                grid.AdjustColumns();
             }
         }
 
@@ -120,13 +120,13 @@ namespace AvaloniaGridDefinitionBehavoir
                 {
                     var definition = new RowDefinition()
                     {
-                        Height = GridLength.Auto
+                        Height = GridLength.Star
                     };
 
                     grid.RowDefinitions.Add(definition);
                 }
 
-                SetStarRows(grid);
+                grid.AdjustRows();
             }
         }
 
@@ -155,7 +155,7 @@ namespace AvaloniaGridDefinitionBehavoir
             if (obj is Grid grid
                 && !string.IsNullOrEmpty(args.NewValue.ToString()))
             {
-                SetStarColumns(grid);
+                grid.AdjustColumns();
             }
         }
 
@@ -164,7 +164,7 @@ namespace AvaloniaGridDefinitionBehavoir
             if (obj is Grid grid
                 && !string.IsNullOrEmpty(args.NewValue.ToString()))
             {
-                SetStarRows(grid);
+                grid.AdjustRows();
             }
         }
 
@@ -172,42 +172,40 @@ namespace AvaloniaGridDefinitionBehavoir
 
         #region Private Methods
 
-        private static void SetStarColumns(Grid grid)
+        private static void AdjustColumns(this Grid grid)
         {
             var starColumns = GetStarColumns(grid);
 
-            if (!string.IsNullOrWhiteSpace(starColumns))
-            {
-                var regex = new Regex(starColumns);
+            var regex = !string.IsNullOrWhiteSpace(starColumns)
+                ? new Regex(starColumns)
+                : default;
 
-                for (int i = 0; i < grid.ColumnDefinitions.Count; i++)
+            for (int i = 0; i < grid.ColumnDefinitions.Count; i++)
+            {
+                if (regex?.IsMatch(i.ToString()) != true)
                 {
-                    if (regex.IsMatch(i.ToString()))
-                    {
-                        grid.ColumnDefinitions[i].Width = new GridLength(
-                            value: 1,
-                            type: GridUnitType.Star);
-                    }
+                    grid.ColumnDefinitions[i].Width = new GridLength(
+                        value: 1,
+                        type: GridUnitType.Auto);
                 }
             }
         }
 
-        private static void SetStarRows(Grid grid)
+        private static void AdjustRows(this Grid grid)
         {
             var starRows = GetStarRows(grid);
 
-            if (!string.IsNullOrWhiteSpace(starRows))
-            {
-                var regex = new Regex(starRows);
+            var regex = !string.IsNullOrWhiteSpace(starRows)
+                ? new Regex(starRows)
+                : default;
 
-                for (int i = 0; i < grid.RowDefinitions.Count; i++)
+            for (int i = 0; i < grid.RowDefinitions.Count; i++)
+            {
+                if (regex?.IsMatch(i.ToString()) != true)
                 {
-                    if (regex.IsMatch(i.ToString()))
-                    {
-                        grid.RowDefinitions[i].Height = new GridLength(
-                            value: 1,
-                            type: GridUnitType.Star);
-                    }
+                    grid.RowDefinitions[i].Height = new GridLength(
+                        value: 1,
+                        type: GridUnitType.Auto);
                 }
             }
         }
